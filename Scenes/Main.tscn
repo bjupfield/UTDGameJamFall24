@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bopvhc4plhokk"]
+
+[ext_resource type="Script" path="res://Scripts/Player/PlayerCam.gd" id="1_6dday"]
+[ext_resource type="Script" path="res://Scripts/Scene/InitiateMain.gd" id="1_a3jf4"]
+[ext_resource type="PackedScene" uid="uid://u7wu8gys8q5x" path="res://Entities/NonPlayer/HerdMember.tscn" id="2_fihtf"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_a3jf4")
+
+[node name="HerdMember" parent="." instance=ExtResource("2_fihtf")]
+offset_left = 338.0
+offset_top = 239.0
+offset_right = 341.0
+offset_bottom = 242.0
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerCamera" type="Camera2D" parent="."]
+position = Vector2(576, 325)
+script = ExtResource("1_6dday")
