@@ -5,13 +5,13 @@
     "configurations": [
         {
             "name": "Run Godot",
-            "type": "coreclr",
+            //"type": "coreclr",
             "request": "launch",
-            "program": "/usr/bin/Godot",
+            "program": "/home/lisa/godot/Engine/Godot",
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "stopAtEntry": false,
-            "args":["--path", "${workspaceRoot}"]
+            //"args":["--path", "${workspaceRoot}"]
         }
     ]
 }

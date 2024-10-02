@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/Player/PlayerCam.cs" id="4_jgejk"]
 
 [node name="Main" type="Node2D"]
+position = Vector2(1, 0)
 script = ExtResource("1_u85f5")
 
 [node name="PlayerCamera" type="Camera2D" parent="."]

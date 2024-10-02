@@ -4,10 +4,22 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 
+
+struct vector3F
+{
+	public float x;
+	public float y;
+	public float z;
+	public int blobId;
+}
 public partial class HerdMember : ColorRect
 {
 [DllImport("./HerdManager/bin/HerdContr.so", EntryPoint ="func")]
+//https://www.codeproject.com/Articles/18032/How-to-Marshal-a-C-Class
+//refer to this to link against c++ classes in c# files
 static extern int func();
+[DllImport("./HerdManager/bin/HerdContr.so", EntryPoint ="delta")]
+static extern vector3F delta();
 
 	[Export]
 	public HerdController herdCont {get; set;}
@@ -36,7 +48,7 @@ static extern int func();
 		};
 		text = (Label)this.FindChild("Label");
 		//text.Set("text", memberID.ToString());
-		text.Set("text", func());
+		text.Set("text", delta().xN);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
