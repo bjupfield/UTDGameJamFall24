@@ -1,0 +1,23 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Compile Into C++ .so File",
+            "command": "/usr/bin/gcc",
+            "args": [
+                "-shared",
+                "-o",
+                "bin/HerdContr.so",
+                "${workspaceFolder}/HerdContr.cpp",
+                //"-l",
+                //"fpic"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+        
+    ],
+    "version": "2.0.0"
+}

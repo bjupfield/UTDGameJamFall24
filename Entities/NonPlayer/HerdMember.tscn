@@ -5,5 +5,13 @@
 [node name="HerdMember" type="ColorRect"]
 offset_right = 3.0
 offset_bottom = 3.0
+scale = Vector2(7.97778, 7.54902)
 color = Color(0.152106, 0.330454, 0.188042, 1)
 script = ExtResource("1_bok2n")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(0.0751552, 0.133542)
+text = "Gello"

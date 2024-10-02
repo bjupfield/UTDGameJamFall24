@@ -15,9 +15,18 @@ script = ExtResource("4_jgejk")
 [node name="Node2D" type="Node2D" parent="."]
 script = ExtResource("3_fcgtq")
 
-[node name="HerdMember" parent="." instance=ExtResource("2_fihtf")]
+[node name="HerdMember2" parent="." node_paths=PackedStringArray("herdCont") instance=ExtResource("2_fihtf")]
+offset_left = 703.0
+offset_top = 140.0
+offset_right = 706.0
+offset_bottom = 143.0
+scale = Vector2(12.4877, 22.3801)
+herdCont = NodePath("../Node2D")
+
+[node name="HerdMember" parent="." node_paths=PackedStringArray("herdCont") instance=ExtResource("2_fihtf")]
 offset_left = 388.0
 offset_top = 319.0
 offset_right = 391.0
 offset_bottom = 322.0
 scale = Vector2(49.8066, 44.3987)
+herdCont = NodePath("../Node2D")

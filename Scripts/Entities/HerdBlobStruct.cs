@@ -3,16 +3,7 @@ using System;
 using System.Runtime.CompilerServices;
 
 
-public struct HerdMemberReturnStruct
-{
-	Vector2 newPos;
-	Vector2 moveVec;
-	float divergence;
-	int memberId;
-}
-
-
-public unsafe struct herdMemberMapData
+public unsafe struct HerdMemberMapData
 { 
 //***********************************************/
 //This Data Will be placed in below HerdBlobStruct in a Map
@@ -21,25 +12,29 @@ public unsafe struct herdMemberMapData
 
 	public Vector2 movVec;
 	public Vector2 realPos;
-	public void* func;
-	int blobId;
-	herdMemberMapData* next;
+	public int blobId;
+	public int memberId;
+	public HerdMemberMapData* next;
 }
 public struct HerdBlobStruct
 {
 
-	Vector2 blobPos;
-	Vector2 blobVec;
+	public Vector2 blobPos;
+	public Vector2 blobVec;
+	public int memberCount;
 }
-public unsafe struct herdMemberSynchronizedData
+public unsafe struct HerdMemberSynchronizedData
 {
 /************************************/
 //This Contains info that will be passed to all herd members and calculated at the same time
 /************************************/
-	herdMemberMapData[,]* previousMap;
-	herdMemberMapData[,]* newMap;
-	HerdBlobStruct[] blobInfo;
+	public HerdMemberMapData[,]* preMap;
+	public HerdMemberMapData[,]* nextMap;
+	public HerdBlobStruct[]* preBlobs;
+	public HerdBlobStruct[]* nextBlobs;
 	
-	float preMapStepValue;
-	float postMapStepValue;
+	public float preMapStepValue;
+	public float nextMapStepValue;
+	public Vector2 preMapOffset;
+	public Vector2 nextMapOffset;
 }

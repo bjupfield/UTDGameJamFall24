@@ -7,7 +7,7 @@
             "name": "Run Godot",
             "type": "coreclr",
             "request": "launch",
-            "program": "/home/lisa/godot/Engine/Godot",
+            "program": "/usr/bin/Godot",
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "stopAtEntry": false,
